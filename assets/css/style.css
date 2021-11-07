@@ -24,6 +24,8 @@ body {
     width: 100vw;
     height: 100vh;
     position: relative;
+    animation-name: opacity-initial-name;
+    animation-duration: 15s;
 }
 
 .name {
@@ -35,9 +37,20 @@ body {
     background: radial-gradient(circle at 50% 10%, #fed373 4%, #fbf8f8 90%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+}
+
+.name {
     animation-name: light-name;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+}
+
+.developer {
+    margin-top: 50vh;
+    text-align: center;
+    z-index: 40;
+    font-size: 10vh;
+    opacity: 100%;
 }
 
 #particles-js {
@@ -119,14 +132,23 @@ body {
     }
 }
 
+@keyframes opacity-initial-name {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
 @keyframes light-name {
     0% {
-        opacity: 60%;
+        opacity: 50%;
     }
     50% {
         opacity: 100%;
     }
     100% {
-        opacity: 60%;
+        opacity: 50%;
     }
 }
