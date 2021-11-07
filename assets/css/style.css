@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: black;
+    z-index: -2;
+}
+
+.first-look {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.name-developer {
+    z-index: 20;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.name {
+    margin-top: 50vh;
+    text-align: center;
+    z-index: 30;
+    font-size: 10vh;
+    opacity: 100%;
+    background: radial-gradient(circle at 50% 10%, #fed373 4%, #fbf8f8 90%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation-name: light-name;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#particles-js {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 100%;
+    animation-name: particles-opacity-control;
+    animation-duration: 10s;
+}
+
+.sun-box {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    margin: auto;
+    animation-name: amanecer;
+    animation-duration: 5s;
+}
+
+.sun {
+    width: 45%;
+    margin: auto;
+    z-index: 10;
+    opacity: 90%;
+    box-sizing: border-box;
+    border-radius: 100%;
+    background: radial-gradient(circle at 50% 50%, #fed373 4%, #f15245 40%, #130808 60%);
+}
+
+.sun {
+    animation-name: sol-vivo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.sun::after {
+    content: '';
+    padding-bottom: 100%;
+    display: block;
+}
+
+@keyframes particles-opacity-control {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 80%;
+    }
+}
+
+@keyframes amanecer {
+    0% {
+        top: 100%;
+        opacity: 0%;
+    }
+    100% {
+        top: 0%;
+        opacity: 90%;
+    }
+}
+
+@keyframes sol-vivo {
+    0% {
+        opacity: 90%;
+        transform: scale(1.2);
+        background: radial-gradient(circle at 50% 50%, #fed373 5%, #f15245 40%, #130808 60%);
+    }
+    50% {
+        opacity: 70%;
+        transform: scale(1);
+        background: radial-gradient(circle at 50% 50%, #fed373 4%, #f15245 40%, #130808 60%);
+    }
+    100% {
+        opacity: 90%;
+        transform: scale(1.2);
+        background: radial-gradient(circle at 50% 50%, #fed373 5%, #f15245 40%, #130808 60%);
+    }
+}
+
+@keyframes light-name {
+    0% {
+        opacity: 60%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 60%;
+    }
+}
