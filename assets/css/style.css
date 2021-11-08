@@ -4,7 +4,10 @@
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 body {
@@ -16,7 +19,6 @@ body {
 .first-look {
     width: 100vw;
     height: 100vh;
-    overflow-y: hidden;
 }
 
 .name-developer {
@@ -27,6 +29,7 @@ body {
     position: relative;
     animation-name: opacity-initial-name;
     animation-duration: 15s;
+    overflow-y: hidden;
 }
 
 .name {
@@ -93,6 +96,13 @@ body {
     content: '';
     padding-bottom: 100%;
     display: block;
+}
+
+.about {
+    width: 100vw;
+    height: 100vh;
+    z-index: 30;
+    color: #fbf8f8;
 }
 
 @keyframes particles-opacity-control {
